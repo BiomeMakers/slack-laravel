@@ -9,27 +9,22 @@ it uses
 A new developer is leading the project
 in a different repository.
 
+* Note 2020: Support for Laravel 6
+
 
 ## Install
 
 ### Composer stuff
 
 
-This needs a implementation of the HTTPlug adapter.
-
-```
-composer require php-http/guzzle6-adapter
-```
-
-And then require this package using
-the git repository.
+Require this package using the git repository.
 I have not published it into packagist.
 
 ```json
 "require": {
     
     ...
-    "javfres/slack-laravel": "2.1.*",
+    "javfres/slack-laravel": "^3.0.0",
 
 },
 

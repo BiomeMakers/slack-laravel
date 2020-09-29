@@ -67,6 +67,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         switch ($version) {
 
             case 5:
+            case 6:
               return new ServiceProviderLaravel5($app);
 
             default:

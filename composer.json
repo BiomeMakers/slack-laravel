@@ -1,7 +1,7 @@
 {
     "name": "javfres/slack-laravel",
-    "version": "2.1.0",
-    "description": "Laravel 5 integration for the nexylan/slack package.",
+    "version": "3.0.0",
+    "description": "Laravel 5 and 6 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
     "authors": [
@@ -12,11 +12,17 @@
     ],
     "require": {
         "php": ">=7.2",
-        "nexylan/slack": "~2.3"
+        "nexylan/slack": "~2.3",
+        "php-http/guzzle6-adapter": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "Javfres\\Slack\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev"
         }
     },
     "minimum-stability": "stable"
