@@ -3,8 +3,10 @@
 namespace Javfres\Slack;
 
 use RuntimeException;
+use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+class ServiceProvider extends IlluminateServiceProvider implements DeferrableProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -16,7 +18,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * The actual provider.
      *
-     * @var \Illuminate\Support\ServiceProvider
+     * @var ServiceProviderLaravel5
      */
     protected $provider;
 
@@ -62,7 +64,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $app = $this->app;
 
-        $version = intval($app::VERSION);
+        $version = intval($app->version());
 
         switch ($version) {
 

@@ -2,8 +2,6 @@
 
 namespace Javfres\Slack;
 
-use Nexy\Slack\Client;
-
 
 class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
 {

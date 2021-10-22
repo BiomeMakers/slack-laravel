@@ -2,20 +2,19 @@
 
 namespace Javfres\Slack;
 
+use Http\Discovery\Psr17FactoryDiscovery;
+use Http\Discovery\Psr18ClientDiscovery;
 
 use Nexy\Slack\Client;
 use Nexy\Slack\Attachment;
 use Nexy\Slack\AttachmentField;
 
-
 final class ClientProxy {
-
 
     /**
      * The real client
      */
     private $client;
-
 
     /**
      * The constructor
@@ -23,6 +22,9 @@ final class ClientProxy {
     function __construct($app){
 
         $this->client = new Client(
+            Psr18ClientDiscovery::find(),
+            Psr17FactoryDiscovery::findRequestFactory(),
+            Psr17FactoryDiscovery::findStreamFactory(),
             $app['config']->get('slack.endpoint'),
             [
                 'channel' => $app['config']->get('slack.channel'),
@@ -35,9 +37,7 @@ final class ClientProxy {
                 'markdown_in_attachments' => $app['config']->get('slack.markdown_in_attachments'),
             ]
         );
-
     }
-
 
     /**
      * Pass any unhandled methods through the client instance
@@ -69,16 +69,11 @@ final class ClientProxy {
                 case 'fields':
                     $attach->setFields($this->array2fields($value));
                     continue 2;
-
             }
-
             throw new \RuntimeException("Not supported '$item' in array2attach");
-
         }
-
         return $attach;
     }
-
 
     public function array2fields(array $arr){
 
@@ -103,23 +98,14 @@ final class ClientProxy {
                     case 'short':
                         $short = $v;
                         continue 2;
-    
                 }
     
                 throw new \RuntimeException("Not supported '$item' in array2fields");
-    
             }
 
             $res[] = new AttachmentField($title, $value, $short);
-
         }
-
-
         return $res;
-
-
     }
 
-
 }
-
