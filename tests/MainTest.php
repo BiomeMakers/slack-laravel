@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
+namespace Tests;
 
-final class MainTest extends TestCase{
+final class MainTest extends TestCase {
 
     public function testOne(): void {
         $this->assertEquals(
