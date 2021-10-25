@@ -65,9 +65,6 @@ class ServiceProvider extends IlluminateServiceProvider implements DeferrablePro
         /** @var Illuminate\Foundation\Application */
         $app = $this->app;
 
-        print_r("HOllla" . is_null($app));
-        print_r($app);
-
         $version = intval($app::VERSION);
 
         switch ($version) {
