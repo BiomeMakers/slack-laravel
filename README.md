@@ -10,6 +10,7 @@ A new developer is leading the project
 in a different repository.
 
 * Note 2020: Support for Laravel 6
+* Note 2021: Support for Laravel 9
 
 
 ## Install
@@ -24,7 +25,7 @@ I have not published it into packagist.
 "require": {
     
     ...
-    "javfres/slack-laravel": "^3.0.0",
+    "biomemakers/slack-laravel": "^4.0.0",
 
 },
 
@@ -33,7 +34,7 @@ I have not published it into packagist.
 "repositories": [
     {
         "type": "git",
-        "url": "https://github.com/javfres/laravel-jslang"
+        "url": "https://github.com/BiomeMakers/slack-laravel"
     }
 ]
 ```
