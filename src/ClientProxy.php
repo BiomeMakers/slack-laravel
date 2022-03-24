@@ -3,6 +3,8 @@
 namespace Javfres\Slack;
 
 
+use Http\Discovery\Psr17FactoryDiscovery;
+use Http\Discovery\Psr18ClientDiscovery;
 use Nexy\Slack\Client;
 use Nexy\Slack\Attachment;
 use Nexy\Slack\AttachmentField;
@@ -23,6 +25,9 @@ final class ClientProxy {
     function __construct($app){
 
         $this->client = new Client(
+            Psr18ClientDiscovery::find(),
+            Psr17FactoryDiscovery::findRequestFactory(),
+            Psr17FactoryDiscovery::findStreamFactory(),
             $app['config']->get('slack.endpoint'),
             [
                 'channel' => $app['config']->get('slack.channel'),
