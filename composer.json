@@ -1,5 +1,5 @@
 {
-    "name": "javfres/slack-laravel",
+    "name": "biomemakers/slack-laravel",
     "version": "4.0.1",
     "description": "Laravel 7 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
