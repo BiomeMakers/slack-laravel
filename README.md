@@ -11,7 +11,7 @@ in a different repository.
 
 * Note 2020: Support for Laravel 6
 
-
+ 
 ## Install
 
 ### Composer stuff
