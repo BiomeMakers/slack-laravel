@@ -1,7 +1,7 @@
 {
     "name": "javfres/slack-laravel",
     "version": "4.0.0",
-    "description": "Laravel 6 integration for the nexylan/slack package.",
+    "description": "Laravel 7 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
     "authors": [
@@ -32,7 +32,7 @@
         "mockery/mockery": "^1.4",
         "illuminate/support": "^6",
         "illuminate/console": "^6",
-        "laravel/framework": "^6"
+        "laravel/framework": "^7"
     },
     "autoload-dev": {
         "psr-4": {
