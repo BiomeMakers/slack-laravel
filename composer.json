@@ -30,8 +30,6 @@
     "require-dev": {
         "phpunit/phpunit": "^9",
         "mockery/mockery": "^1.4",
-        "illuminate/support": "^6",
-        "illuminate/console": "^6",
         "laravel/framework": "^7"
     },
     "autoload-dev": {
