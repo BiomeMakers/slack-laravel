@@ -24,7 +24,8 @@
     "extra": {
         "branch-alias": {
             "dev-master": "3.0-dev",
-            "dev-php8": "4.0-dev"
+            "dev-php8": "4.0-dev",
+            "dev-php8-laravel7": "4.0-dev"
         }
     },
     "require-dev": {
@@ -37,5 +38,10 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
 }
