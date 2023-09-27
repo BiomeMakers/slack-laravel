@@ -71,6 +71,7 @@ class ServiceProvider extends IlluminateServiceProvider implements DeferrablePro
 
             case 5:
             case 6:
+            case 7:
               return new SlackServiceProviderLaravel5($app);
 
             default:
