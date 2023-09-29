@@ -68,10 +68,8 @@ class ServiceProvider extends IlluminateServiceProvider implements DeferrablePro
         $version = intval($app::VERSION);
 
         switch ($version) {
-
-            case 5:
-            case 6:
             case 7:
+            case 8:
               return new SlackServiceProviderLaravel5($app);
 
             default:

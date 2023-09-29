@@ -1,7 +1,7 @@
 {
     "name": "biomemakers/slack-laravel",
-    "version": "4.0.1",
-    "description": "Laravel 7 integration for the nexylan/slack package.",
+    "version": "4.0.2",
+    "description": "Laravel 8 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
     "authors": [
@@ -31,7 +31,7 @@
     "require-dev": {
         "phpunit/phpunit": "^9",
         "mockery/mockery": "^1.4",
-        "laravel/framework": "^7"
+        "laravel/framework": "^8"
     },
     "autoload-dev": {
         "psr-4": {
