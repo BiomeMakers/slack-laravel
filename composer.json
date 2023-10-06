@@ -26,7 +26,7 @@
             "dev-master": "3.0-dev",
             "dev-php8": "4.0-dev",
             "dev-laravel7": "4.0.1-dev",
-            "dev-php8-laravel8": "4.0.3-dev"
+            "dev-php8_laravel8": "4.0.3-dev"
         }
     },
     "require-dev": {
