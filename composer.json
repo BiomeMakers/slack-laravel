@@ -1,6 +1,6 @@
 {
     "name": "biomemakers/slack-laravel",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "description": "Laravel 8 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
@@ -25,7 +25,8 @@
         "branch-alias": {
             "dev-master": "3.0-dev",
             "dev-php8": "4.0-dev",
-            "dev-laravel7": "4.0.1-dev"
+            "dev-laravel7": "4.0.1-dev",
+            "dev-php8-laravel8": "4.0.3-dev"
         }
     },
     "require-dev": {
