@@ -4,7 +4,7 @@ namespace Javfres\Slack;
 
 use Illuminate\Support\ServiceProvider;
 
-class SlackServiceProviderLaravel5 extends ServiceProvider
+class SlackServiceProviderLaravel9 extends ServiceProvider
 {
     /**
      * Bootstrap the application events.
@@ -27,11 +27,11 @@ class SlackServiceProviderLaravel5 extends ServiceProvider
 
         $this->app->singleton('javfres.slack', function($app) {
 
-            return new ClientProxy($app);          
+            return new ClientProxy($app);
 
         });
 
         $this->app->bind('Javfres\Slack\ClientProxy', 'javfres.slack');
-    
+
     }
 }
