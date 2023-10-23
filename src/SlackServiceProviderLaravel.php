@@ -4,7 +4,7 @@ namespace Javfres\Slack;
 
 use Illuminate\Support\ServiceProvider;
 
-class SlackServiceProviderLaravel9 extends ServiceProvider
+class SlackServiceProviderLaravel extends ServiceProvider
 {
     /**
      * Bootstrap the application events.
