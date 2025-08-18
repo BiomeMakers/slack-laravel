@@ -1,7 +1,7 @@
 {
     "name": "biomemakers/slack-laravel",
-    "version": "4.1.1",
-    "description": "Laravel 11 integration for the nexylan/slack package.",
+    "version": "4.2.0",
+    "description": "Laravel 12 integration for the nexylan/slack package.",
     "keywords": ["slack", "laravel"],
     "license": "BSD-2-Clause",
     "authors": [
@@ -31,13 +31,14 @@
             "dev-php8_laravel9": "4.0.4-dev",
             "dev-php82_laravel10": "4.0.5-dev",
             "dev-php82_laravel11": "4.0.6-dev",
-            "dev-php83_laravel11": "4.1.0-dev"
+            "dev-php83_laravel11": "4.1.0-dev",
+            "dev-php83_laravel12": "4.2.0-dev"
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^10",
+        "phpunit/phpunit": "^11.5",
         "mockery/mockery": "^1.6",
-        "laravel/framework": "^11.0"
+        "laravel/framework": "^12.0"
     },
     "autoload-dev": {
         "psr-4": {

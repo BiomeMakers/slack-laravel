@@ -67,17 +67,10 @@ class ServiceProvider extends IlluminateServiceProvider implements DeferrablePro
 
         $version = intval($app::VERSION);
 
-        switch ($version) {
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-            case 11:
-              return new SlackServiceProviderLaravel($app);
-
-            default:
-              throw new RuntimeException("Your version of Laravel ($version) is not supported");
-        }
+        return match ($version) {
+            7, 8, 9, 10, 11, 12 => new SlackServiceProviderLaravel($app),
+            default => throw new RuntimeException("Your version of Laravel ($version) is not supported"),
+        };
     }
 
     /**
